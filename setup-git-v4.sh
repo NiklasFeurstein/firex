@@ -48,4 +48,5 @@ echo "If you made a mistake rerun (if problem --> delete ~/.gitconfig)"
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
+echo "######     Create SSH Key For Connection Yourself      #########"
 echo "################################################################"
