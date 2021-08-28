@@ -1,1 +1,3 @@
 # firex
+
+Arch Setup Scripts
