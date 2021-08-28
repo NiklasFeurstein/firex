@@ -44,7 +44,7 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=32000'
 git config --global push.default simple
 
-echo "If you made a mistake rerun (if problem --> delete ~/.gitconfig)"
+echo "Delete the local ./git/ if you made a mistake"
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
