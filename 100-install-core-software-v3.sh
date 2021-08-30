@@ -1,12 +1,12 @@
 #!/bin/bash
 #set -e
 ##################################################################################################################
-# Author 	: Erik Dubois
-# Website : https://www.erikdubois.be
-# Website	: https://www.arcolinux.info
-# Website	:	./https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxforum.com
+# Author : Erik Dubois
+# Website: https://www.erikdubois.be
+# Website: https://www.arcolinux.info
+# Website: https://www.arcolinux.com
+# Website: https://www.arcolinuxd.com
+# Website: https://www.arcolinuxforum.com
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
@@ -25,6 +25,8 @@ sudo pacman -S --noconfirm --needed vlc
 sudo pacman -S --noconfirm --needed sublime-text-4
 
 sudo pacman -S --noconfirm --needed meld
+
+sudo pacman -S --noconfirm --needed gitahead-bin
 
 sudo pacman -S --noconfirm --needed the_platinum_searcher-bin
 
