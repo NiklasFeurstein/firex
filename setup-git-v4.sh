@@ -36,8 +36,6 @@ read -p "Input: " email
 
 git config --global pull.rebase false
 git config --global user.name "$fullname"
-echo "$fullname"
-echo "$email"
 git config --global user.email "$email"
 sudo git config --system core.editor nano
 git config --global credential.helper cache
@@ -48,5 +46,5 @@ echo "If you made a mistake rerun (if problem --> delete ~/.gitconfig)"
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
-echo "######     Create SSH Key For Connection Yourself      #########"
+echo "######                                                 #########"
 echo "################################################################"
