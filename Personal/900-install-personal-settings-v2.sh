@@ -15,10 +15,21 @@ set -e
 
 echo "Creating private folders we use later"
 
-[ -d "/personal" ] || mkdir -p "/personal"
+[ -d $HOME"/.bin" ] || mkdir -p $HOME"/.bin"
+[ -d $HOME"/.backgrounds" ] || mkdir -p $HOME"/.backgrounds"
+[ -d $HOME"/.fonts" ] || mkdir -p $HOME"/.fonts"
+[ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
+[ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
+[ -d $HOME"/.local/share/icons" ] || mkdir -p $HOME"/.local/share/icons"
+[ -d $HOME"/.local/share/themes" ] || mkdir -p $HOME"/.local/share/themes"
+[ -d "/personal" ] || sudo mkdir -p "/personal"
+[ -d "/personal/settings" ] || sudo mkdir -p "/personal/settings"
 
 echo "Adding personal looks to /personal"
-sudo cp -rf ../Personal-Settings/* /personal
+sudo cp -rf ./desktop-configs/* /personal
+
+echo "Adding settings to personal" # .[^.] is for hidden files
+sudo cp -rf ./settings/.[^.]* /personal/settings
 
 echo "################################################################"
 echo "#########            folders created            ################"

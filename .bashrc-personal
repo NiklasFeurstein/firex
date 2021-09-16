@@ -1,4 +1,0 @@
-#moving your personal files and folders from /personal/x to ~
-alias personal1='cp -Rf /personal/1 ~'
-alias personal2='cp -Rf /personal/2 ~'
-alias personal3='cp -Rf /personal/3 ~'

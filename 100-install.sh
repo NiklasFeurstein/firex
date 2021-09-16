@@ -31,6 +31,13 @@ function installationloop(){
 	done
 }
 
+function copysettings(){
+	echo "Installing Personal Settings"
+	cd Personal
+	sh ./900-install-personal-settings-v2.sh
+	cd ..
+}
+
 function userbreak(){
 	echo "Cancelling..."
 	exit 130
@@ -38,3 +45,4 @@ function userbreak(){
 
 
 installationloop
+copysettings
