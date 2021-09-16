@@ -1,4 +1,32 @@
 #CATEGORY,NAME IN REPO (or git url)
+S;REQUIRED
+;xorg-server
+;xorg-apps
+;xorg-xinit
+;nvidia
+;nvidia-utils
+;nvidia-settings
+;sddm
+;thunar
+;thunar-archive-plugin
+;thunar-volman
+;arcolinux-xfce-git
+;arcolinux-local-xfce4-git
+;awesome
+;vicious
+;feh
+;arandr
+;arcolinux-awesome-git
+;arcolinux-awesome-dconf-git
+;arcolinux-config-awesome-git
+;arcolinux-logout-git
+S;TERMINAL
+;rofi
+;rxvt-unicode
+;rxvt-unicode-terminfo
+;urxvt-fullscreen
+;urxvt-perls
+;urxvt-resize-font-git
 S;COMMUNICATION
 ;discord
 ;spotify
@@ -15,5 +43,6 @@ S;DEVELOPMENT
 S;INTERNET & MEDIA
 ;brave
 ;firefox
+;lynx
 ;vlc
-#A;ahoviewer-git
+A;ahoviewer-git
