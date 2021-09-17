@@ -33,7 +33,6 @@ naughty.config.defaults['icon_size'] = 100
 --local menubar       = require("menubar")
 
 local lain          = require("lain")
-local freedesktop   = require("freedesktop")
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -233,29 +232,12 @@ beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv
 local myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
     { "arandr", "arandr" },
+    { "restart", awesome.restart },
 }
-
-awful.util.mymainmenu = freedesktop.menu.build({
-    before = {
-        { "Awesome", myawesomemenu },
-        --{ "Atom", "atom" },
-        -- other triads can be put here
-    },
-    after = {
-        { "Terminal", terminal },
-        { "Log out", function() awesome.quit() end },
-        { "Sleep", "systemctl suspend" },
-        { "Restart", "systemctl reboot" },
-        { "Shutdown", "systemctl poweroff" },
-        -- other triads can be put here
-    }
-})
--- hide menu when mouse leaves it
---awful.util.mymainmenu.wibox:connect_signal("mouse::leave", function() awful.util.mymainmenu:hide() end)
-
---menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
--- }}}
-
+awful.util.mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu },
+                                                { "open terminal", terminal },
+                                                { "Shutdown", "systemctl poweroff" }}
+                                    })
 
 
 -- {{{ Screen
