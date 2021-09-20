@@ -10,7 +10,10 @@ Arch Setup Scripts
 
 - source `bash.rc`
 
-- execute `Personal\[x\]`
+## Commands
+
+Load Theme #x: `personal\[x\]`
+Reload General Settings: `personalsettings`
 
 ## Personal Reminder
 
