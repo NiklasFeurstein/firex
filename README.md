@@ -8,7 +8,7 @@ Arch Setup Scripts
 
 - copy `/personal/settings` to `~`
 
-- source `bash.rc`
+- source `.bashrc`
 
 ## Commands
 
