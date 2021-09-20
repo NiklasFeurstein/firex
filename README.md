@@ -12,7 +12,8 @@ Arch Setup Scripts
 
 ## Commands
 
-Load Theme #x: `personal\[x\]`
+Load Theme #x: `personal[x]`
+
 Reload General Settings: `personalsettings`
 
 ## Personal Reminder
