@@ -6,7 +6,6 @@ S;REQUIRED
 ;nvidia
 ;nvidia-utils
 ;nvidia-settings
-A;nvidia-xrun-git
 ;sddm
 ;arcolinux-sddm-sugar-candy-git
 ;thunar
