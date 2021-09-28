@@ -116,9 +116,9 @@ local modkey1      = "Control"
 -- personal variables
 --change these variables if you want
 local browser1          = "brave"
-local browser2          = "firefox"
-local browser3          = "chromium -no-default-browser-check"
-local editor            = os.getenv("EDITOR") or "nano"
+local browser2          = "google-chrome-stable"
+local browser3          = "firefox"
+local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "subl"
 local filemanager       = "thunar"
 local mailclient        = "evolution"
@@ -293,7 +293,7 @@ globalkeys = my_table.join(
     -- dmenu
     awful.key({ modkey, "Shift"   }, "d",
     function ()
-        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn Terminus:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),

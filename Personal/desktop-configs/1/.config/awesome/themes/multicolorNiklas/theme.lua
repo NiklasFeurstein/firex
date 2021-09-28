@@ -15,10 +15,10 @@ local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
-theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
+theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolorNiklas"
 --theme.wallpaper                                 = theme.confdir .. "/wallpaper.jpg"
 --theme.wallpaper                                 = "/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"
-theme.font                                      = "Terminus 10"
+theme.font                                      = "Terminus 13"
 theme.taglist_font                              = "Terminus 13"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
@@ -154,7 +154,7 @@ theme.volume = lain.widget.alsa({
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume = lain.widget.pulse {
     settings = function()
-        vlevel = volume_now.left .. "%"
+        vlevel = volume_now.left .. "% "
         if volume_now.muted == "yes" then
             vlevel = vlevel .. " M"
         end

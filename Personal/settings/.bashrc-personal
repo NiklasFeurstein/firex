@@ -3,3 +3,7 @@ alias personalsettings='cp -Rf /personal/settings/* ~ && source ~/.bashrc'
 alias personal1='cp -Rf /personal/1/* ~ && personalsettings'
 alias personal2='cp -Rf /personal/2/* ~ && personalsettings'
 alias personal3='cp -Rf /personal/3/* ~ && personalsettings'
+
+# default editor to neovim
+export EDITOR='nvim'
+export VISUAL='nvim'

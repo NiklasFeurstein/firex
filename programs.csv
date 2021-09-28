@@ -6,6 +6,7 @@ S;REQUIRED
 ;nvidia
 ;nvidia-utils
 ;nvidia-settings
+A;nvidia-xrun-git
 ;sddm
 ;arcolinux-sddm-sugar-candy-git
 ;thunar
@@ -36,6 +37,7 @@ S;COMMUNICATION
 ;signal-desktop
 S;DEVELOPMENT
 ;sublime-text-4
+;neovim
 ;meld
 ;gitahead-bin
 ;the_platinum_searcher-bin
@@ -48,8 +50,11 @@ S;INTERNET & MEDIA
 ;lynx
 ;vlc
 ;qbittorrent
+;youtube-dl
 A;ahoviewer-git
 S; MANAGEMENT
 ;pass
 ;pass-otp
 ;xclip
+S; LANGUAGE
+;otf-ipafont
