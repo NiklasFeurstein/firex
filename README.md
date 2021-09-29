@@ -6,13 +6,13 @@ Arch Setup Scripts
 
 - execute `100-install.sh`
 
-- copy `/personal/settings` to `~`
+- copy `cp -r /personal/settings.[^.]* ~`
 
 - source `.bashrc`
 
 ## Commands
 
-Load Theme #x: `personal[x]`
+Load Theme #x: `personal[x]` -> reload awesome now
 
 Reload General Settings: `personalsettings`
 
