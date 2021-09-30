@@ -26,10 +26,10 @@ echo "Creating private folders we use later"
 [ -d "/personal/settings" ] || sudo mkdir -p "/personal/settings"
 
 echo "Adding personal looks to /personal"
-sudo cp -rf ./desktop-configs/* /personal
+sudo cp -rf ../personal/desktop-configs/* /personal
 
 echo "Adding settings to personal" # .[^.] is for hidden files
-sudo cp -rf ./settings/.[^.]* /personal/settings
+sudo cp -rf ../personal/settings/.[^.]* /personal/settings
 
 echo "################################################################"
 echo "#########            folders created            ################"

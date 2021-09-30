@@ -1,23 +1,22 @@
 #CATEGORY,NAME IN REPO (or git url)
 S;REQUIRED
-#;xorg-server
-#;xorg-apps
-#;xorg-xinit
-#;nvidia
-#;nvidia-utils
-#;nvidia-settings
-#;sddm
+;xorg-server
+;xorg-apps
+;xorg-xinit
+;sddm
 #;arcolinux-sddm-sugar-candy-git
 ;thunar
 #;thunar-archive-plugin
 #;thunar-volman
 #;arcolinux-xfce-git
 #;arcolinux-local-xfce4-git
-#;awesome
-#;vicious
+;awesome
+;xterm
 ;feh
 ;arandr
 ;bash-completions
+;pulseaudio
+;pavucontrol
 #;lxappearance
 #;arcolinux-awesome-git
 #;arcolinux-awesome-dconf-git
@@ -37,7 +36,7 @@ S;COMMUNICATION
 ;telegram-desktop
 ;signal-desktop
 S;DEVELOPMENT
-;sublime-text-4
+A;sublime-text-4
 ;neovim
 ;meld
 ;gitahead-bin
@@ -46,8 +45,9 @@ S;DEVELOPMENT
 #;ttf-wps-fonts
 #;wps-office-mime
 S;INTERNET & MEDIA
-A;brave
+A;brave-bin
 ;firefox
+A;google-chrome
 ;lynx
 ;vlc
 ;qbittorrent
@@ -57,6 +57,9 @@ S; MANAGEMENT
 ;pass
 ;pass-otp
 ;xclip
+;reflector
+;man-pages
+;man-db
 S; LANGUAGE
 ;terminus-font
 ;otf-ipafont

@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo pacman -S --needed base-devel
 echo "You have $(nproc) cores."
 echo "Changing the makeflags for $(nproc) cores."
 sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makepkg.conf

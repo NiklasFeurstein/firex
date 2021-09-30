@@ -31,11 +31,27 @@ function installationloop(){
 	done
 }
 
+function afterInstall(){
+	# embable sddm
+	sh ./scripts/500-enable-sddm.sh
+
+	# copy personal folder
+	copysettings
+}
+
 function copysettings(){
 	echo "Installing Personal Settings"
-	cd Personal
+	cd scripts
 	sh ./900-install-personal-settings-v2.sh
 	cd ..
+}
+
+function beforeInstall(){
+	# Increase package build speed
+	sh ./scripts/000-use-all-cores-makepkg-conf-v4.sh
+
+	# Install Paru
+	sh ./scripts/001-install-paru.sh
 }
 
 function userbreak(){
@@ -43,6 +59,6 @@ function userbreak(){
 	exit 130
 }
 
-
+beforeInstall
 installationloop
-copysettings
+afterInstall
