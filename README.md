@@ -4,7 +4,7 @@ Arch Setup Scripts
 
 ## Installation
 
-- execute `100-install.sh`
+- execute `install.sh`
 
 - copy `cp -r /personal/settings.[^.]* ~`
 
