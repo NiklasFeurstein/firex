@@ -22,7 +22,8 @@ echo "Creating private folders we use later"
 [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
 [ -d $HOME"/.local/share/icons" ] || mkdir -p $HOME"/.local/share/icons"
 [ -d $HOME"/.local/share/themes" ] || mkdir -p $HOME"/.local/share/themes"
-[ -d "/personal" ] || sudo mkdir -p "/personal"
+# Purge folder before create in case of removed files
+[ -d "/personal" ] && sudo rm -rf "/personal/*" || sudo mkdir -p "/personal"
 [ -d "/personal/settings" ] || sudo mkdir -p "/personal/settings"
 
 echo "Adding personal looks to /personal"
