@@ -1,0 +1,2 @@
+xrdb $HOME/.config/x11/xresources	# use colors for st
+xcompmgr &		# xcompmgr for transparency

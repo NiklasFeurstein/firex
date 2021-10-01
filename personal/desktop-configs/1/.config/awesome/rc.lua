@@ -119,11 +119,11 @@ local browser1          = "brave"
 local browser2          = "google-chrome-stable"
 local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
-local editorgui         = "subl"
+local editorgui         = "atom"
 local filemanager       = "thunar"
 local mailclient        = "evolution"
 local mediaplayer       = "spotify"
-local terminal          = "urxvt"
+local terminal          = "st"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables

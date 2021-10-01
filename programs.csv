@@ -17,6 +17,7 @@ S;REQUIRED
 ;bash-completions
 ;pulseaudio
 ;pavucontrol
+;dmenu
 #;lxappearance
 #;arcolinux-awesome-git
 #;arcolinux-awesome-dconf-git
@@ -24,11 +25,7 @@ S;REQUIRED
 #;arcolinux-logout-git
 S;TERMINAL
 ;rofi
-;rxvt-unicode
-;rxvt-unicode-terminfo
-;urxvt-fullscreen
-;urxvt-perls
-;urxvt-resize-font-git
+G;https://github.com/LukeSmithxyz/st.git
 ;neofetch
 S;COMMUNICATION
 ;discord
@@ -36,7 +33,7 @@ S;COMMUNICATION
 ;telegram-desktop
 ;signal-desktop
 S;DEVELOPMENT
-A;sublime-text-4
+;atom
 ;neovim
 ;meld
 ;gitahead-bin
@@ -57,9 +54,12 @@ S; MANAGEMENT
 ;pass
 ;pass-otp
 ;xclip
+;xdotool
 ;reflector
 ;man-pages
 ;man-db
+;htop
+;ntfs-3g
 S; LANGUAGE
 ;terminus-font
 ;otf-ipafont

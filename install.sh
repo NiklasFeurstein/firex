@@ -14,6 +14,15 @@ function aurinstall(){
 	$aurhelper --noconfirm --needed -S "$1"
 }
 
+function gitmakeinstall(){
+	echo "Installing GIT package: $1"
+	sudo -u "$USER" git clone "$1" ./temp
+	cd temp
+	sudo make install
+	cd ..
+	rm -rf ./temp
+}
+
 function maininstall(){
 	echo "Installing package:  "  "$1"
 	installpkg "$1"
@@ -25,6 +34,7 @@ function installationloop(){
 		echo $category
 		case "$category" in
 			"A") aurinstall "$program";;
+			"G") gitmakeinstall "$program";;
 			"S") echo "########  Installing $program Programs  ########";;
 			*) maininstall "$program";;
 		esac
