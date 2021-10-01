@@ -26,7 +26,7 @@ S;REQUIRED
 #;arcolinux-logout-git
 S;TERMINAL
 ;rofi
-G;https://github.com/LukeSmithxyz/st.git
+G;https://github.com/NiklasFeurstein/st
 ;neofetch
 S;COMMUNICATION
 ;discord
