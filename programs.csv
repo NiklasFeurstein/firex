@@ -18,6 +18,7 @@ S;REQUIRED
 ;pulseaudio
 ;pavucontrol
 ;dmenu
+;xcompmgr
 #;lxappearance
 #;arcolinux-awesome-git
 #;arcolinux-awesome-dconf-git
