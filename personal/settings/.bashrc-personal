@@ -1,8 +1,12 @@
-#moving your personal files and folders from /personal/x to ~
+# moving your personal files and folders from /personal/x to ~
 alias personalsettings='cp -Rf /personal/settings/* ~ && source ~/.bashrc'
 alias personal1='cp -Rf /personal/1/* ~ && personalsettings'
 alias personal2='cp -Rf /personal/2/* ~ && personalsettings'
 alias personal3='cp -Rf /personal/3/* ~ && personalsettings'
+
+# screenshot with maim
+alias screenshotcopy='maim -s | xclip -selection clipboard -t image/png'
+alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
 
 # default editor to neovim
 export EDITOR='nvim'

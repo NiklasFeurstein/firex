@@ -21,6 +21,7 @@ S;REQUIRED
 ;dmenu;is the program/command launcher
 ;xcompmgr;is for terminal transparency
 ;expac;is for the rip alias
+;maim;is the screenshot tool
 #;lxappearance
 #;arcolinux-awesome-git
 #;arcolinux-awesome-dconf-git
