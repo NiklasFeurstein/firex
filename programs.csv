@@ -40,7 +40,7 @@ S;DEVELOPMENT
 ;atom;is the IDE
 ;neovim;is the default editor
 ;meld;is used for file comparisons
-;gitahead-bin
+A;gitahead-bin
 ;the_platinum_searcher-bin
 #;wps-office
 #;ttf-wps-fonts
