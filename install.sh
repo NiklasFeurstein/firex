@@ -41,8 +41,9 @@ function installationloop(){
 }
 
 function afterInstall(){
-	# embable sddm
+	# enable services
 	sh ./scripts/500-enable-sddm.sh
+	sh ./scripts/501-enable-networkmanager.sh
 
 	# copy personal folder
 	copysettings

@@ -46,6 +46,9 @@ A;gitahead-bin
 #;ttf-wps-fonts
 #;wps-office-mime
 S;INTERNET & MEDIA
+;networkmanager;provides detection and configuration for networks
+;nm-connection-editor;is the network gui
+;network-manager-applet;is the network system tray icon
 A;brave-bin
 ;firefox
 A;google-chrome
