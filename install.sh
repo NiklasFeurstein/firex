@@ -45,6 +45,9 @@ function afterInstall(){
 	sh ./scripts/500-enable-sddm.sh
 	sh ./scripts/501-enable-networkmanager.sh
 
+	# execute stuff
+	sh ./scripts/600-execute-hblock.sh
+
 	# copy personal folder
 	copysettings
 }
