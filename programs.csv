@@ -6,7 +6,7 @@ S;REQUIRED
 ;sddm;is the display manager
 ;thunar;is the graphical file manager
 ;awesome;is the window manager
-;xterm;support for the default awesome terminal in case of fallback
+;xterm;the default awesome terminal in case of fallback
 ;xclip;is to allow copy paste
 ;feh;is for setting the awesome background
 ;arandr;is used to generate xrandr scripts with a GUI
@@ -18,7 +18,6 @@ S;REQUIRED
 ;xcompmgr;is for terminal transparency
 ;expac;is for the rip alias
 ;maim;is the screenshot tool
-A;arcolinux-logout-git
 S;TERMINAL AND LAUNCHER
 ;rofi
 G;https://github.com/NiklasFeurstein/st
