@@ -1,4 +1,4 @@
-# firEX
+# fireX
 
 Arch Setup Scripts
 
