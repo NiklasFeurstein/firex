@@ -1,4 +1,4 @@
 configuration {
   theme: "android_notification";
-  font: "mono 14";
+  font: "mono 15";
 }

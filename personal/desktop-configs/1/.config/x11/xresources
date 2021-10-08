@@ -2,7 +2,7 @@
 st.alpha: 0.9
 
 !! Set a default font and font size as below:
-st.font: Terminus-14;
+st.font: Terminus-20;
 
 /* name		dark	light */
 /* black	0	8 */
