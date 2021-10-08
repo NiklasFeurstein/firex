@@ -1,4 +1,4 @@
-# firex
+# firEX
 
 Arch Setup Scripts
 
@@ -6,7 +6,7 @@ Arch Setup Scripts
 
 - execute `install.sh`
 
-- copy `cp -r /personal/settings.[^.]* ~`
+- copy `cp -r /personal/settings/.[^.]* ~`
 
 - source `.bashrc`
 
