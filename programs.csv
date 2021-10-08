@@ -1,15 +1,10 @@
-#CATEGORY,NAME IN REPO (or git url)
+#CATEGORY;NAME IN REPO (or git url);COMMENT
 S;REQUIRED
 ;xorg-server
 ;xorg-apps
 ;xorg-xinit
 ;sddm;is the display manager
-#;arcolinux-sddm-sugar-candy-git
 ;thunar;is the graphical file manager
-#;thunar-archive-plugin
-#;thunar-volman
-#;arcolinux-xfce-git
-#;arcolinux-local-xfce4-git
 ;awesome;is the window manager
 ;xterm;support for the default awesome terminal in case of fallback
 ;xclip;is to allow copy paste
@@ -17,17 +12,14 @@ S;REQUIRED
 ;arandr;is used to generate xrandr scripts with a GUI
 ;bash-completions
 ;pulseaudio;offers audio integration
+;pulseaudio-alsa;is the audio system
 ;pavucontrol;is the GUI for pulseaudio
 ;dmenu;is the program/command launcher
 ;xcompmgr;is for terminal transparency
 ;expac;is for the rip alias
 ;maim;is the screenshot tool
-#;lxappearance
-#;arcolinux-awesome-git
-#;arcolinux-awesome-dconf-git
-#;arcolinux-config-awesome-git
-#;arcolinux-logout-git
-S;TERMINAL
+A;arcolinux-logout-git
+S;TERMINAL AND LAUNCHER
 ;rofi
 G;https://github.com/NiklasFeurstein/st
 ;neofetch
@@ -41,10 +33,6 @@ S;DEVELOPMENT
 ;neovim;is the default editor
 ;meld;is used for file comparisons
 A;gitahead-bin
-;the_platinum_searcher-bin
-#;wps-office
-#;ttf-wps-fonts
-#;wps-office-mime
 S;INTERNET & MEDIA
 ;networkmanager;provides detection and configuration for networks
 ;nm-connection-editor;is the network gui
@@ -56,8 +44,8 @@ A;google-chrome
 ;lynx
 ;vlc;is the media player
 ;qbittorrent;is the torrent application
-;youtube-dl
-#A;ahoviewer-git
+;youtube-dl;command line tool to easily download videos
+A;ahoviewer-git
 S; MANAGEMENT
 ;pass;is the password manager
 ;pass-otp;is the pass extension for one time passwords
@@ -67,7 +55,7 @@ S; MANAGEMENT
 ;man-pages
 ;man-db
 ;htop;is the task manager
-;ntfs-3g;is used to support usb with ntfs file system
+;ntfs-3g;is used to support ntfs file system
 S; LANGUAGE
 ;terminus-font;is the default font
 ;otf-ipafont;supplies the japanese (JA) fonts Mincho and Gothic
