@@ -147,3 +147,8 @@ function! ToggleHiddenAll()
     endif
 endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
+" Auctocomplete Brackets
+inoremap { {<CR>}<Esc>ko
+inoremap [ []<ESC>hli
+inoremap ( ()<ESC>hli
