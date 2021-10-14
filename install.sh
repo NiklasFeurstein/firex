@@ -30,7 +30,7 @@ function maininstall(){
 
 function installationloop(){
 	[ ! -f $programsfile ] && { echo "$programsfile file not found"; exit 99; }
-	sed -e '/^#/d;$a\' $programsfile | while IFS=\; read -r category program comment; do
+	sed -e '/^#/d;$a\' $programsfile | while IFS=\, read -r category program comment; do
 		case "$category" in
 			"A") aurinstall "$program";;
 			"G") gitmakeinstall "$program";;
