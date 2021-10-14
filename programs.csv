@@ -1,8 +1,8 @@
 #CATEGORY,NAME IN REPO (or git url),COMMENT
-S,REQUIRED
-,xorg-server
-,xorg-apps
-,xorg-xinit
+S,REQUIRED,
+,xorg-server,
+,xorg-apps,
+,xorg-xinit,
 ,sddm,is the display manager
 ,thunar,is the graphical file manager
 ,awesome,is the window manager
@@ -10,7 +10,7 @@ S,REQUIRED
 ,xclip,is to allow copy paste
 ,feh,is for setting the awesome background
 ,arandr,is used to generate xrandr scripts with a GUI
-,bash-completions
+,bash-completions,
 ,pulseaudio,offers audio integration
 ,pulseaudio-alsa,is the audio system
 ,pavucontrol,is the GUI for pulseaudio
@@ -18,43 +18,43 @@ S,REQUIRED
 ,xcompmgr,is for terminal transparency
 ,expac,is for the rip alias
 ,maim,is the screenshot tool
-S,TERMINAL AND LAUNCHER
-,rofi
-G,https://github.com/NiklasFeurstein/st
-,neofetch
-S,COMMUNICATION
-,discord
-,spotify
-,telegram-desktop
-,signal-desktop
-S,DEVELOPMENT
+S,TERMINAL AND LAUNCHER,
+,rofi,
+G,https://github.com/NiklasFeurstein/st,
+,neofetch,
+S,COMMUNICATION,
+,discord,
+,spotify,
+,telegram-desktop,
+,signal-desktop,
+S,DEVELOPMENT,
 ,atom,is the IDE
 ,neovim,is the default editor
 ,meld,is used for file comparisons
-A,gitahead-bin
-S,INTERNET & MEDIA
+A,gitahead-bin,
+S,INTERNET & MEDIA,
 ,networkmanager,provides detection and configuration for networks
 ,nm-connection-editor,is the network gui
 ,network-manager-applet,is the network system tray icon
 A,hblock,is the hosts file adblocker
-A,brave-bin
-,firefox
-A,google-chrome
-,lynx
+A,brave-bin,
+,firefox,
+A,google-chrome,
+,lynx,
 ,vlc,is the media player
 ,qbittorrent,is the torrent application
 ,youtube-dl,command line tool to easily download videos
-A,ahoviewer-git
-S,MANAGEMENT
+A,ahoviewer-git,
+S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
 ,gcr,is used to display the pass gui prompt with passmenu
 ,xdotool,is used to auto type password
 ,reflector,is used to update mirrors (e.g. alias mirrox)
-,man-pages
-,man-db
+,man-pages,
+,man-db,
 ,htop,is the task manager
 ,ntfs-3g,is used to support ntfs file system
-S,LANGUAGE
+S,LANGUAGE,
 ,terminus-font,is the default font
-,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic
+,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic,
