@@ -45,6 +45,7 @@ A,google-chrome,
 ,qbittorrent,is the torrent application
 ,youtube-dl,command line tool to easily download videos
 A,ahoviewer-git,
+A,anki,is a flashcard app
 S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
