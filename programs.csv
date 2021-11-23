@@ -17,7 +17,7 @@ S,REQUIRED,
 ,dmenu,is the program/command launcher
 ,xcompmgr,is for terminal transparency
 ,expac,is for the rip alias
-,maim,is the screenshot tool
+,maim,is the screenshot tool (see respective alias)
 S,TERMINAL AND LAUNCHER,
 ,rofi,
 G,https://github.com/NiklasFeurstein/st,
@@ -44,7 +44,7 @@ A,google-chrome,
 ,vlc,is the media player
 ,qbittorrent,is the torrent application
 ,youtube-dl,command line tool to easily download videos
-,audacity
+,audacity,is for audio recording
 A,ahoviewer-git,
 A,anki,is a flashcard app
 S,MANAGEMENT,
