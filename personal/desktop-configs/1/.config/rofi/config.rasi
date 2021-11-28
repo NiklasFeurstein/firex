@@ -1,4 +1,4 @@
 configuration {
-	font: "Terminus 16";
+	font: "Terminus 15";
 }
 @theme "android_notification"
