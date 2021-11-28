@@ -60,3 +60,6 @@ S,MANAGEMENT,
 S,LANGUAGE,
 ,terminus-font,is the default font
 ,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic
+,noto-fonts,supplies some kanji that aren't supported by gothic
+,noto-fonts-cjk,supplies some kanji that aren't supported by gothic
+,noto-fonts-emoji,supplies all missing emoji
