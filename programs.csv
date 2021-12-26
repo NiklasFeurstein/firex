@@ -42,6 +42,7 @@ A,brave-bin,
 A,google-chrome,
 ,lynx,
 ,vlc,is the media player
+A,mpv-git,is the media player
 ,qbittorrent,is the torrent application
 ,youtube-dl,command line tool to easily download videos
 ,audacity,is for audio recording
@@ -57,6 +58,7 @@ S,MANAGEMENT,
 ,man-db,
 ,htop,is the task manager
 ,ntfs-3g,is used to support ntfs file system
+,slock,is the lockscreen
 S,LANGUAGE,
 ,terminus-font,is the default font
 ,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic
