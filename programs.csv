@@ -24,7 +24,7 @@ G,https://github.com/NiklasFeurstein/st,
 ,neofetch,
 S,COMMUNICATION,
 ,discord,
-,spotify,
+A,spotify,
 ,telegram-desktop,
 ,signal-desktop,
 S,DEVELOPMENT,
@@ -41,8 +41,7 @@ A,brave-bin,
 ,firefox,
 A,google-chrome,
 ,lynx,
-,vlc,is the media player
-A,mpv-git,is the media player
+A,mpv-mpvacious,is the media player
 ,qbittorrent,is the torrent application
 ,youtube-dl,command line tool to easily download videos
 ,audacity,is for audio recording
