@@ -4,6 +4,9 @@ alias personal1='cp -Rf /personal/1/* ~ && personalsettings'
 alias personal2='cp -Rf /personal/2/* ~ && personalsettings'
 alias personal3='cp -Rf /personal/3/* ~ && personalsettings'
 
+# youtube dl
+alias ytv1080p='youtube-dl -f "bestvideo[height<=1920]+bestaudio/best"'
+
 # screenshot with maim
 alias screenshotcopy='maim -s | xclip -selection clipboard -t image/png'
 alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
@@ -11,6 +14,9 @@ alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
 # default editor to neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+# extract audio
+alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:1 -f segment -segment_time 180 -c:a copy audio/"${i%.mkv}"%03d.m4a; done'
 
 # Autostart ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
