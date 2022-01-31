@@ -25,6 +25,16 @@ echo "Creating private folders we use later"
 # Purge folder before create in case of removed files
 [ -d "/personal" ] && sudo rm -rf "/personal/*" || sudo mkdir -p "/personal"
 [ -d "/personal/settings" ] || sudo mkdir -p "/personal/settings"
+# Mount Folders
+[ -d "/mnt" ] || sudo mkdir -p "/mnt"
+[ -d "/mnt/hdd4tb" ] || sudo mkdir -p "/mnt/hdd4tb"
+[ -d "/mnt/usb" ] || sudo mkdir -p "/mnt/usb"
+[ -d "/mnt/phone" ] || sudo mkdir -p "/mnt/phone"
+
+echo "Changing permissions for /mnt folders"
+sudo chown "$USER" "/mnt/hdd4tb" "/mnt/usb" "/mnt/phone"
+sudo chgrp users "/mnt/hdd4tb" "/mnt/usb" "/mnt/phone"
+
 
 echo "Adding personal looks to /personal"
 sudo cp -rf ../personal/desktop-configs/* /personal
