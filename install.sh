@@ -6,12 +6,12 @@ programsfile=programs.csv
 trap userbreak SIGINT SIGTERM
 
 function installpkg(){
-	sudo pacman --noconfirm --needed -S "$1"
+	sudo pacman --noconfirm --needed -S "$1" > /dev/null 2>&1
 }
 
 function aurinstall(){
 	echo "Installing AUR package:  "  "$1"
-	$aurhelper --noconfirm --needed -S "$1"
+	pacman -Qi "$1" > /dev/null || $aurhelper --noconfirm --needed -S "$1"
 }
 
 function gitmakeinstall(){
@@ -47,6 +47,9 @@ function afterInstall(){
 
 	# execute stuff
 	sh ./scripts/600-execute-hblock.sh
+
+	# boomarks adjustment
+	sh ./scripts/700-adjust-bookmarks.sh
 
 	# copy personal folder
 	copysettings
