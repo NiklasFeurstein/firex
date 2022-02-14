@@ -16,7 +16,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # extract audio
-alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -f segment -segment_time 180 -c:a copy audio/"${i%.mkv}"%03d.wav; done'
+alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -f segment -segment_time 180 -c:a libmp3lame audio/"${i%.mkv}"%03d.mp3; done'
 
 # Autostart ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
