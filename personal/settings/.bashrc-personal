@@ -10,13 +10,16 @@ alias ytv1080p='youtube-dl -f "bestvideo[height<=1920]+bestaudio/best"'
 # screenshot with maim
 alias screenshotcopy='maim -s | xclip -selection clipboard -t image/png'
 alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
+alias screenshotcopyComplete='maim | xclip -selection clipboard -t image/png'
+alias screenshotsaveComplete='maim ~/Pictures/sc-$(date +%s).png'
 
 # default editor to neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
 
 # extract audio
-alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -f segment -segment_time 180 -c:a libmp3lame audio/"${i%.mkv}"%03d.mp3; done'
+alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -c:a libmp3lame audio/"${i%.mkv}".mp3; done'
+alias extractaudiosegments='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -f segment -segment_time 180 -c:a libmp3lame audio/"${i%.mkv}"%03d.mp3; done'
 
 # Autostart ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
