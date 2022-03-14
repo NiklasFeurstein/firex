@@ -120,11 +120,11 @@ local browser2          = "brave"
 local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "atom"
-local filemanager       = "thunar"
 local mailclient        = "evolution"
 local mediaplayer       = "spotify"
 local terminal          = "st"
 local virtualmachine    = "virtualbox"
+local filemanager       = terminal.." -e lf"
 
 -- awesome variables
 awful.util.terminal = terminal

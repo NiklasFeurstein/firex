@@ -5,6 +5,11 @@ S,REQUIRED,
 ,xorg-xinit,
 ,sddm,is the display manager
 ,thunar,is the graphical file manager
+A,lf,is our default console file manager
+,ueberzug,is required for image previews in lf
+,ffmpegthumbnailer,is required for video previews in lf
+,perl-image-exiftool,is required for previews of diverse files like audio
+A,stpv,does the image previews in lf. integrated in the config
 ,awesome,is the window manager
 ,xterm,the default awesome terminal in case of fallback
 ,xclip,is to allow copy paste
