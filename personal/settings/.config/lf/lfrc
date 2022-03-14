@@ -1,5 +1,6 @@
 # interpreter for shell commands
 set shell sh
+set hidden true
 set previewer stpv
 set cleaner stpvimgclr
 &stpvimg --listen $id
@@ -27,3 +28,5 @@ cmd open ${{
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
+
+map . set hidden!
