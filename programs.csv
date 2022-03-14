@@ -9,7 +9,7 @@ A,lf,is our default console file manager
 ,ueberzug,is required for image previews in lf
 ,ffmpegthumbnailer,is required for video previews in lf
 ,perl-image-exiftool,is required for previews of diverse files like audio
-A,stpv,does the image previews in lf. integrated in the config
+A,stpv-git,does the image previews in lf. integrated in the config
 ,awesome,is the window manager
 ,xterm,the default awesome terminal in case of fallback
 ,xclip,is to allow copy paste
@@ -64,6 +64,7 @@ S,MANAGEMENT,
 ,htop,is the task manager
 ,ntfs-3g,is used to support ntfs file system
 ,slock,is the lockscreen
+,virtualbox,is the virtual machine
 S,LANGUAGE,
 ,terminus-font,is the default font
 ,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic

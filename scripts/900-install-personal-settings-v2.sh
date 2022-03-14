@@ -35,7 +35,6 @@ echo "Changing permissions for /mnt folders"
 sudo chown "$USER" "/mnt/hdd4tb" "/mnt/usb" "/mnt/phone"
 sudo chgrp users "/mnt/hdd4tb" "/mnt/usb" "/mnt/phone"
 
-
 echo "Adding personal looks to /personal"
 sudo cp -rf ../personal/desktop-configs/* /personal
 

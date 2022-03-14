@@ -11,14 +11,14 @@ function installpkg(){
 
 function aurinstall(){
 	echo "Installing AUR package:  "  "$1"
-	pacman -Qi "$1" > /dev/null || $aurhelper --noconfirm --needed -S "$1"
+	pacman -Qi "$1" > /dev/null || $aurhelper --noconfirm --needed -S "$1" > /dev/null 2>&1
 }
 
 function gitmakeinstall(){
 	echo "Installing GIT package: $1"
-	sudo -u "$USER" git clone "$1" ./temp
+	sudo -u "$USER" git clone --quiet "$1" ./temp
 	cd temp
-	sudo make install
+	sudo make install > /dev/null 2>&1
 	cd ..
 	rm -rf ./temp
 }
