@@ -11,7 +11,7 @@ function installpkg(){
 
 function aurinstall(){
 	echo "Installing AUR package:  "  "$1"
-	pacman -Qi "$1" > /dev/null || $aurhelper --noconfirm --needed -S "$1" > /dev/null 2>&1
+	pacman -Qi "$1" > /dev/null 2>&1 || $aurhelper --noconfirm --needed -S "$1" > /dev/null 2>&1
 }
 
 function gitmakeinstall(){
@@ -53,6 +53,9 @@ function afterInstall(){
 
 	# copy personal folder
 	copysettings
+
+	# keyboard layout
+	sh ./scripts/901-set-keyboard-layout.sh
 }
 
 function copysettings(){

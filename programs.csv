@@ -37,7 +37,6 @@ S,DEVELOPMENT,
 ,atom,is the IDE
 ,neovim,is the default editor
 ,meld,is used for file comparisons
-A,gitahead-bin,
 S,INTERNET & MEDIA,
 ,networkmanager,provides detection and configuration for networks
 ,nm-connection-editor,is the network gui
@@ -64,7 +63,6 @@ S,MANAGEMENT,
 ,htop,is the task manager
 ,ntfs-3g,is used to support ntfs file system
 ,slock,is the lockscreen
-,virtualbox,is the virtual machine
 S,LANGUAGE,
 ,terminus-font,is the default font
 ,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic
