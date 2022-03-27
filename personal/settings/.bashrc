@@ -14,11 +14,6 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# Make nano the default editor
-
-export EDITOR='nano'
-export VISUAL='nano'
-
 PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
@@ -261,40 +256,12 @@ ex ()
   fi
 }
 
-#arcolinux applications
-alias att="arcolinux-tweak-tool"
-alias adt="arcolinux-desktop-trasher"
-alias abl="arcolinux-betterlockscreen"
-alias agm="arcolinux-get-mirrors"
-alias amr="arcolinux-mirrorlist-rank-info"
-alias aom="arcolinux-osbeck-as-mirror"
-alias ars="arcolinux-reflector-simple"
-alias atm="arcolinux-tellme"
-alias avs="arcolinux-vbox-share"
-alias awa="arcolinux-welcome-app"
-
 #remove
 alias rmgitcache="rm -r ~/.cache/git"
-
-#moving your personal files and folders from /personal to ~
-alias personal='cp -Rf /personal/* ~'
 
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-# reporting tools - install when not installed
 neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
