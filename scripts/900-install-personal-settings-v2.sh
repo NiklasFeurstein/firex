@@ -15,6 +15,10 @@ set -e
 
 echo "Creating private folders we use later"
 
+[ -d $HOME"/Desktop" ] || mkdir -p $HOME"/Desktop"
+[ -d $HOME"/Downloads" ] || mkdir -p $HOME"/Downloads"
+[ -d $HOME"/Pictures" ] || mkdir -p $HOME"/Pictures"
+
 [ -d $HOME"/.bin" ] || mkdir -p $HOME"/.bin"
 [ -d $HOME"/.backgrounds" ] || mkdir -p $HOME"/.backgrounds"
 [ -d $HOME"/.fonts" ] || mkdir -p $HOME"/.fonts"
@@ -22,9 +26,11 @@ echo "Creating private folders we use later"
 [ -d $HOME"/.themes" ] || mkdir -p $HOME"/.themes"
 [ -d $HOME"/.local/share/icons" ] || mkdir -p $HOME"/.local/share/icons"
 [ -d $HOME"/.local/share/themes" ] || mkdir -p $HOME"/.local/share/themes"
+
 # Purge folder before create in case of removed files
 [ -d "/personal" ] && sudo rm -rf "/personal/*" || sudo mkdir -p "/personal"
 [ -d "/personal/settings" ] || sudo mkdir -p "/personal/settings"
+
 # Mount Folders
 [ -d "/mnt" ] || sudo mkdir -p "/mnt"
 [ -d "/mnt/hdd4tb" ] || sudo mkdir -p "/mnt/hdd4tb"
