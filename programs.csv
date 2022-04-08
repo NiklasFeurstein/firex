@@ -23,6 +23,7 @@ A,stpv-git,does the image previews in lf. integrated in the config
 ,xcompmgr,is for terminal transparency
 ,expac,is for the rip alias
 ,maim,is the screenshot tool (see respective alias)
+,hw-probe,is for the probe alias to check drivers
 S,TERMINAL AND LAUNCHER,
 ,rofi,
 G,https://github.com/NiklasFeurstein/st,
