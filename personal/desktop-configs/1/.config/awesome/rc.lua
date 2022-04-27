@@ -432,12 +432,10 @@ globalkeys = my_table.join(
     --    {description = "Xlunch app launcher", group = "altkey"}),
 
     -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
-        {description = "Scrot", group = "screenshots"}),
-    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
-        {description = "Xfce screenshot", group = "screenshots"}),
-    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
-        {description = "Gnome screenshot", group = "screenshots"}),
+    awful.key({ }, "Print", function () awful.util.spawn_with_shell("maim -s | xclip -selection clipboard -t image/png") end,
+        {description = "ScreenshotCopy", group = "screenshots"}),
+    awful.key({ modkey1 }, "Print", function () awful.util.spawn_with_shell("maim -s ~/Pictures/sc-$(date +%s).png") end,
+        {description = "ScreenshotSave", group = "screenshots"}),
 
     -- Personal keybindings}}}
 
