@@ -49,7 +49,7 @@ A,google-chrome,
 ,lynx,
 A,mpv-mpvacious,is the media player
 ,qbittorrent,is the torrent application
-,youtube-dl,command line tool to easily download videos
+,yt-dlp,command line tool to easily download videos
 ,audacity,is for audio recording
 A,ahoviewer-git,
 A,anki,is a flashcard app

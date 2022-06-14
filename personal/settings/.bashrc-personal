@@ -4,9 +4,6 @@ alias personal1='cp -Rf /personal/1/* ~ && personalsettings'
 alias personal2='cp -Rf /personal/2/* ~ && personalsettings'
 alias personal3='cp -Rf /personal/3/* ~ && personalsettings'
 
-# youtube dl
-alias ytv1080p='youtube-dl -f "bestvideo[height<=1920]+bestaudio/best"'
-
 # screenshot with maim
 alias screenshotcopy='maim -s | xclip -selection clipboard -t image/png'
 alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
