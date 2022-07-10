@@ -16,8 +16,6 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolorNiklas"
---theme.wallpaper                                 = theme.confdir .. "/wallpaper.jpg"
---theme.wallpaper                                 = "/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"
 theme.font                                      = "Terminus 15"
 theme.taglist_font                              = "Terminus 15"
 theme.menu_bg_normal                            = "#000000"
