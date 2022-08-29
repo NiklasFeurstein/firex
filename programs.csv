@@ -15,7 +15,7 @@ A,stpv-git,does the image previews in lf. integrated in the config
 ,xclip,is to allow copy paste
 ,feh,is for setting the awesome background
 ,arandr,is used to generate xrandr scripts with a GUI
-,bash-completions,
+,bash-completion,
 ,pulseaudio,offers audio integration
 ,pulseaudio-alsa,is the audio system
 ,pavucontrol,is the GUI for pulseaudio
@@ -23,7 +23,7 @@ A,stpv-git,does the image previews in lf. integrated in the config
 ,xcompmgr,is for terminal transparency
 ,expac,is for the rip alias
 ,maim,is the screenshot tool (see respective alias)
-,hw-probe,is for the probe alias to check drivers
+A,hw-probe,is for the probe alias to check drivers
 S,TERMINAL AND LAUNCHER,
 ,rofi,
 G,https://github.com/NiklasFeurstein/st,
@@ -35,7 +35,6 @@ A,spotify,
 ,telegram-desktop,
 ,signal-desktop,
 S,DEVELOPMENT,
-,atom,is the IDE
 ,neovim,is the default editor
 ,meld,is used for file comparisons
 S,INTERNET & MEDIA,
@@ -45,8 +44,6 @@ S,INTERNET & MEDIA,
 A,hblock,is the hosts file adblocker
 A,brave-bin,
 ,firefox,
-A,google-chrome,
-,lynx,
 A,mpv-mpvacious,is the media player
 ,qbittorrent,is the torrent application
 ,yt-dlp,command line tool to easily download videos
