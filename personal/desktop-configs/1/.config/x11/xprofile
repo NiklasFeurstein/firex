@@ -1,2 +1,9 @@
 xrdb $HOME/.config/x11/xresources	# use colors for st
 xcompmgr &		# xcompmgr for transparency
+
+# -- IMF for JP Keyboard --
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+fcitx &
+# -- END --

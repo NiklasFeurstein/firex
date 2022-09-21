@@ -70,3 +70,8 @@ S,LANGUAGE,
 ,noto-fonts,supplies some kanji that aren't supported by gothic
 ,noto-fonts-cjk,supplies some kanji that aren't supported by gothic
 ,noto-fonts-emoji,supplies all missing emoji
+,fcitx,IMF for JP Keyboard
+,fcitx-qt5,IMF for JP Keyboard
+,fcitx-qt6,IMF for JP Keyboard
+,fcitx-configtool,IMF Config Tool
+,fcitx-kkc,IME for JP Keyboard
