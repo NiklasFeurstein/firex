@@ -53,6 +53,8 @@ A,anki,is a flashcard app
 A,superproductivity-bin,is the time/task tracker
 ,xournalpp,is the pdf editor
 ,libreoffice-still,is the office suite
+,simple-scan,is the document scanner
+,sane-airscan,is the driver for most scanners
 S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
