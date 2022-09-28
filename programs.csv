@@ -44,7 +44,7 @@ S,INTERNET & MEDIA,
 A,hblock,is the hosts file adblocker
 A,brave-bin,
 ,firefox,
-A,mpv-mpvacious,is the media player
+,mpv,is the media player
 ,qbittorrent,is the torrent application
 ,yt-dlp,command line tool to easily download videos
 ,audacity,is for audio recording
