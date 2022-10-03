@@ -5,7 +5,7 @@ S,REQUIRED,
 ,xorg-xinit,
 ,sddm,is the display manager
 ,thunar,is the graphical file manager
-A,lf,is our default console file manager
+,lf,is our default console file manager
 ,ueberzug,is required for image previews in lf
 ,ffmpegthumbnailer,is required for video previews in lf
 ,perl-image-exiftool,is required for previews of diverse files like audio
@@ -42,7 +42,6 @@ S,INTERNET & MEDIA,
 ,nm-connection-editor,is the network gui
 ,network-manager-applet,is the network system tray icon
 A,hblock,is the hosts file adblocker
-A,brave-bin,
 ,firefox,
 ,mpv,is the media player
 ,qbittorrent,is the torrent application
