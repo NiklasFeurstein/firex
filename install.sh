@@ -51,6 +51,7 @@ function afterInstall(){
 	# late installation of some programs
 	sh ./scripts/601-install-ungoogled-chromium.sh
 	sh ./scripts/602-install-mpvacious.sh
+	sh ./scripts/603-install-ffsubsync.sh
 
 	# boomarks adjustment
 	sh ./scripts/700-adjust-bookmarks.sh
