@@ -309,9 +309,14 @@ globalkeys = my_table.join(
         {description = "pulseaudio control", group = "super"}),
     awful.key({ modkey }, "p", function () awful.util.spawn( "passmenu -i" ) end,
         {description = "password manager", group = "super"}),
+    awful.key({ modkey }, "Insert", function () awful.util.spawn_with_shell("xdotool type --delay 1 $(grep -Ev '^(#|$)' ~/.local/share/autotyper/autotyper.txt | dmenu -i -l 50 | cut -d' ' -f1)") end,
+        {description = "AutoTyper", group = "super"}),
 
     -- super + shift + ...
-    awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end),
+    awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end, {description = "filemanager", group = "super"}),
+    awful.key({ modkey, "Shift"   }, "Insert", function () awful.util.spawn_with_shell("~/.bin/autotypesaver.sh") end,
+        {description = "AutoTypeSaver", group = "super"}),
+
 
     -- ctrl+alt +  ...
     awful.key({ modkey1, altkey   }, "f", function() awful.util.spawn( browser2 ) end,
