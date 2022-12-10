@@ -293,16 +293,12 @@ globalkeys = my_table.join(
         {description = "meld" , group = "function keys" }),
     awful.key({ modkey }, "F5", function () awful.util.spawn( "virtualbox" ) end,
         {description = virtualmachine , group = "function keys" }),
-    awful.key({ modkey }, "F11", function () awful.util.spawn( "rofi -show drun -fullscreen" ) end,
-        {description = "rofi fullscreen" , group = "function keys" }),
 
     -- super + ...
     awful.key({ modkey }, "e", function () awful.util.spawn( editorgui ) end,
         {description = "run gui editor", group = "super"}),
     awful.key({ modkey }, "h", function () awful.util.spawn( terminal.." -T 'htop task manager' -e htop" ) end,
         {description = "htop", group = "super"}),
-    awful.key({ modkey }, "r", function () awful.util.spawn( "rofi-theme-selector" ) end,
-        {description = "rofi theme selector", group = "super"}),
     awful.key({ modkey }, "t", function () awful.util.spawn( terminal ) end,
         {description = "terminal", group = "super"}),
     awful.key({ modkey }, "v", function () awful.util.spawn( "pavucontrol" ) end,

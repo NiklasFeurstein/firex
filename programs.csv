@@ -25,7 +25,6 @@ A,stpv-git,does the image previews in lf. integrated in the config
 ,maim,is the screenshot tool (see respective alias)
 A,hw-probe,is for the probe alias to check drivers
 S,TERMINAL AND LAUNCHER,
-,rofi,
 G,https://github.com/NiklasFeurstein/st,
 ,neofetch,
 S,COMMUNICATION,
