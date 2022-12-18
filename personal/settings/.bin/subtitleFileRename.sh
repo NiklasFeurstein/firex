@@ -35,7 +35,14 @@ then
     fi
 fi
 
-for counter in $(seq 0 $[numberOfVideoFiles-1])
+if [[ numberOfVideoFiles -ge numberOfSubtitleFiles ]]
+then
+    minOfVideosAndSubtitles=$numberOfSubtitleFiles
+else
+    minOfVideosAndSubtitles=$numberOfVideoFiles
+fi
+
+for counter in $(seq 0 $[minOfVideosAndSubtitles-1])
 do
     fullNameOfVideo="$(basename "${foundVideoFiles[$counter]}")"
     fileNameOfVideo="${fullNameOfVideo%.*}"
@@ -49,4 +56,4 @@ do
     mv "${foundSubtitleFiles[$counter]}" "${newNameOfSubtitle}"
 done
 
-echo "Successfully renamed ${numberOfVideoFiles} subtitle files."
+echo "Successfully renamed ${minOfVideosAndSubtitles} subtitle files."
