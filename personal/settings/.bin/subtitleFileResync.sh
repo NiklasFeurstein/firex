@@ -10,25 +10,37 @@ then
     pip install ffsubsync==0.4.22
 fi
 
-for reference in *.mkv; do
-    # globbing and replace to get file name
-    # expected structure e.g. ./subs.jp/filename.ja.srt
-    to_retime=./subs*/$(basename "${reference/.mkv/.ja.srt}")
+# enable nullglob (in case of empty for loop)
+shopt -s nullglob
 
-    # convert to array to extract the matched directory
-    fileAsArray=( $to_retime ) 
-    globbedFileName=${fileAsArray[0]}
+for reference in *.mkv *.mp4; do
+    shopt -u nullglob
 
-    if ! [[ -f $globbedFileName ]]
+    # expected structure e.g. ./subs*/filename.ja.(srt|ass)
+    subtitleFileName="${reference/%.???/.ja.srt}"
+
+    # get the subs directory
+    readarray -d '' directoryName < <(find . -maxdepth 1 -type d -name "subs*" -print0)
+    directoryName=${directoryName[0]}
+
+    # assemble complete path
+    subtitleFilePath=$directoryName/$subtitleFileName
+
+    # check if srt is correct format otherwise change to ass
+    if ! [[ -f $subtitleFilePath ]]
     then
-        echo "ERROR: No match for $to_retime" 1>&2
+        subtitleFileName="${subtitleFileName/.ja.srt/.ja.ass}"
+        subtitleFilePath=$directoryName/$subtitleFileName
+    elif ! [[ -f $subtitleFilePath ]]
+    then
+        echo "ERROR: No match for $subtitleFilePath" 1>&2
         continue
     fi
 
     # % delete the shortest match from end  |  # delete the shortest match from start
-    basenameOfFile=$(basename $to_retime)
-    retimed=${globbedFileName%.*.*}_retimed.${basenameOfFile#*.}
+    retimed=${subtitleFilePath%.*.*}_retimed.${subtitleFileName#*.}
 
-    # sync subs. $to_retime without " for filename expansion
-    ffsubsync "$reference" -i $to_retime -o "$retimed"
+    ffsubsync "$reference" -i "$subtitleFilePath" -o "$retimed"
+
+    shopt -s nullglob
 done
