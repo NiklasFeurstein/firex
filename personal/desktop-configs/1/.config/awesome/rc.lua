@@ -307,6 +307,8 @@ globalkeys = my_table.join(
         {description = "password manager", group = "super"}),
     awful.key({ modkey }, "Insert", function () awful.util.spawn_with_shell("xdotool type --delay 1 $(grep -Ev '^(#|$)' ~/.local/share/autotyper/autotyper.txt | dmenu -i -l 50 | cut -d' ' -f1)") end,
         {description = "AutoTyper", group = "super"}),
+    awful.key({ modkey }, "Prior", function () awful.util.spawn("transformers_ocr recognize") end,
+        {description = "AutoTyper", group = "super"}),
 
     -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end, {description = "filemanager", group = "super"}),
