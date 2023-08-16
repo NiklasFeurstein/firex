@@ -1,9 +1,9 @@
 #!/bin/sh
 
-###############################################################
-#     Resyncs the subtitle files in the subs* subdirectory    #
-#          according to the subtitles of a .mkv file          #
-###############################################################
+####################################################################
+#  Resyncs the subtitle files in the subs* subdirectory according  #
+#         to the sound or subtitles of a .mkv or .mp4 file         #
+####################################################################
 
 if [[ -z "$(pip list | grep -F ffsubsync)" ]]
 then

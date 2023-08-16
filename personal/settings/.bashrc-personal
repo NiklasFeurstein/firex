@@ -17,13 +17,6 @@ alias ytv='yt-dlp -o "%(title)s.%(ext)s"'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# extract audio
-alias extractaudio='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -c:a libmp3lame audio/"${i%.mkv}".mp3; done'
-alias extractaudiosegments='mkdir audio; for i in *.mkv; do ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 -f segment -segment_time 180 -c:a libmp3lame audio/"${i%.mkv}"%03d.mp3; done'
-
-# synchronize subtitles (JP Subs have to be in folder subs.jp, input is the english subs in the mkv)
-alias retimesubs='for reference in ./*.mkv; do to_retime=./subs.ja/$(basename "${reference/.mkv/.srt}"); retimed=${to_retime%.*}_retimed.${to_retime##*.}; ffsubsync "$reference" -i "$to_retime" -o "$retimed"; done'
-
 # Autostart ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
