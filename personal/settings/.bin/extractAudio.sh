@@ -47,7 +47,7 @@ do
 done
 
 # reset glob
-shopt -s nullglob
+shopt -u nullglob
 
 # Error handling and output
 if [ "$audioFilesExtracted" -eq 0 ]
