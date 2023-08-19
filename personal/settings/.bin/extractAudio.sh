@@ -42,7 +42,7 @@ shopt -s nullglob
 
 for i in *.mkv *.mp4
 do
-    ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 ${prependCMD}-c:a libmp3lame extractedAudio/"${i%.*}"${appendCMD}.mp3
+    ffmpeg -i "${i}" -map 0:a:m:language:jpn -acodec copy -f matroska pipe: | ffmpeg -i pipe: -map 0:0 ${prependCMD}-c:a libmp3lame "extractedAudio/${i%.*}${appendCMD}.mp3"
     audioFilesExtracted=$((++audioFilesExtracted))
 done
 
