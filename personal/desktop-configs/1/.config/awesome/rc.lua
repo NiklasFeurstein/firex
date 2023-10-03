@@ -103,12 +103,13 @@ local browser1          = "chromium"
 local browser2          = "brave"
 local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
-local editorgui         = "atom"
+local editorgui         = "code-oss"
 local mailclient        = "evolution"
 local mediaplayer       = "spotify"
 local terminal          = "st"
 local virtualmachine    = "virtualbox"
 local filemanager       = terminal.." -e lf"
+local vpn               = "eddie-ui"
 
 -- awesome variables
 awful.util.terminal = terminal
@@ -308,7 +309,9 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "Insert", function () awful.util.spawn_with_shell("xdotool type --delay 1 $(grep -Ev '^(#|$)' ~/.local/share/autotyper/autotyper.txt | dmenu -i -l 50 | cut -d' ' -f1)") end,
         {description = "AutoTyper", group = "super"}),
     awful.key({ modkey }, "Prior", function () awful.util.spawn("transformers_ocr recognize") end,
-        {description = "AutoTyper", group = "super"}),
+        {description = "Character Recognition", group = "super"}),
+    awful.key({ modkey }, "z", function () awful.util.spawn(vpn) end,
+        {description = "VPN Client", group = "super"}),
 
     -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end, {description = "filemanager", group = "super"}),
