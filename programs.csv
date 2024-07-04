@@ -54,7 +54,8 @@ A,superproductivity-bin,is the time/task tracker
 ,libreoffice-still,is the office suite
 ,hunspell,is the spell checker
 ,hunspell-en_us,is english language support for hunspell
-,texlive-most,contains most TeX Live packages
+,texlive-latexrecommended,contains most TeX Live packages
+,texlive-binextra,for latexmk etc.
 ,simple-scan,is the document scanner
 ,sane-airscan,is the driver for most scanners
 S,MANAGEMENT,
