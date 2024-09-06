@@ -56,8 +56,9 @@ A,superproductivity-bin,is the time/task tracker
 ,hunspell-en_us,is english language support for hunspell
 ,texlive-latexrecommended,contains most TeX Live packages
 ,texlive-binextra,for latexmk etc.
-,simple-scan,is the document scanner
+,simple-scan,is the document scanner (GUI for sane)
 ,sane-airscan,is the driver for most scanners
+,ardour,is a digital audio workstation (DAW)
 S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
@@ -75,8 +76,5 @@ S,LANGUAGE,
 ,noto-fonts,supplies some kanji that aren't supported by gothic
 ,noto-fonts-cjk,supplies some kanji that aren't supported by gothic
 ,noto-fonts-emoji,supplies all missing emoji
-,fcitx,IMF for JP Keyboard
-,fcitx-qt5,IMF for JP Keyboard
-,fcitx-qt6,IMF for JP Keyboard
-,fcitx-configtool,IMF Config Tool
-,fcitx-kkc,IME for JP Keyboard
+,fcitx5-im,IMF for JP Keyboard
+A,fcitx5-mozc-ut,IME for JP Keyboard
