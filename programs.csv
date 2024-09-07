@@ -59,6 +59,9 @@ A,superproductivity-bin,is the time/task tracker
 ,simple-scan,is the document scanner (GUI for sane)
 ,sane-airscan,is the driver for most scanners
 ,ardour,is a digital audio workstation (DAW)
+,jack2,is a audio server
+,pulseaudio-jack,integrates pulseaudio and jack
+A,cadence,is a GUI for switching between pulseaudio and jack (see https://wiki.archlinux.org/title/Professional_audio#System_configuration and https://wiki.archlinux.org/title/Professional_audio/Examples#PulseAudio+JACK)
 S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
