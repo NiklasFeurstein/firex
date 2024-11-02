@@ -35,6 +35,8 @@ A,spotify,
 ,signal-desktop,
 S,DEVELOPMENT,
 ,neovim,is the default editor
+,code,is visual studio code editor
+A,code-features,unblocks some features in Code OSS
 ,meld,is used for file comparisons
 S,INTERNET & MEDIA,
 ,networkmanager,provides detection and configuration for networks
