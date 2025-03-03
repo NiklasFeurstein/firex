@@ -44,6 +44,7 @@ S,INTERNET & MEDIA,
 ,network-manager-applet,is the network system tray icon
 A,hblock,is the hosts file adblocker
 ,firefox,
+A,ungoogled-chromium-bin,is the main browser
 ,mpv,is the media player
 ,qbittorrent,is the torrent application
 ,yt-dlp,command line tool to easily download videos

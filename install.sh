@@ -49,7 +49,6 @@ function afterInstall(){
 	sh ./scripts/600-execute-hblock.sh
 
 	# late installation of some programs
-	sh ./scripts/601-install-ungoogled-chromium.sh
 	sh ./scripts/602-install-mpvacious.sh
 	sh ./scripts/603-install-ffsubsync.sh
 
