@@ -27,6 +27,7 @@ A,hw-probe,is for the probe alias to check drivers
 S,TERMINAL AND LAUNCHER,
 G,https://github.com/NiklasFeurstein/st,
 ,neofetch,
+A,nbfc-linux,is for the notebook fan control
 S,COMMUNICATION,
 ,hexchat,
 ,discord,
@@ -77,6 +78,7 @@ S,MANAGEMENT,
 ,htop,is the task manager
 ,ntfs-3g,is used to support ntfs file system
 ,slock,is the lockscreen
+,remmina,is a remote desktop client
 S,LANGUAGE,
 ,terminus-font,is the default font for terminal and gtk etc
 ,otf-ipafont,supplies the japanese (JA) fonts Mincho and Gothic
