@@ -67,6 +67,7 @@ A,superproductivity-bin,is the time/task tracker
 ,pulseaudio-jack,integrates pulseaudio and jack
 A,cadence,is a GUI for switching between pulseaudio and jack (see https://wiki.archlinux.org/title/Professional_audio#System_configuration and https://wiki.archlinux.org/title/Professional_audio/Examples#PulseAudio+JACK)
 ,rawtherapee,is a RAW image processing program
+,moonlight-qt,is a game stream client paired with Apollo stream host
 S,MANAGEMENT,
 ,pass,is the password manager
 ,pass-otp,is the pass extension for one time passwords
