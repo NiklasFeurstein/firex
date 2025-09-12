@@ -41,6 +41,7 @@ A,code-features,unblocks some features in Code OSS
 ,meld,is used for file comparisons
 S,INTERNET & MEDIA,
 ,networkmanager,provides detection and configuration for networks
+,networkmanager-openvpn,is for VPN connections
 ,nm-connection-editor,is the network gui
 ,network-manager-applet,is the network system tray icon
 A,hblock,is the hosts file adblocker
