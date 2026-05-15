@@ -13,6 +13,9 @@ alias screenshotsaveComplete='maim ~/Pictures/sc-$(date +%s).png'
 # youtube-dlp
 alias ytv='yt-dlp -o "%(title)s.%(ext)s"'
 
+# python aur rebuild
+alias rebuild-python-aur='pacman -Qoq /usr/lib/python3.* | pacman -Qmq - | paru -S --rebuild -'
+
 # default editor to neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
