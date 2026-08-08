@@ -92,3 +92,4 @@ S,LANGUAGE,
 ,noto-fonts-emoji,supplies all missing emoji
 ,fcitx5-im,IMF for JP Keyboard
 A,fcitx5-mozc-ut,IME for JP Keyboard
+A,vocalinux,is used to dictate text into any application based on a speech recognition model
