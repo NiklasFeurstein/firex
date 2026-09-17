@@ -522,24 +522,24 @@ globalkeys = my_table.join(
     --awful.key({ modkey1 }, "Up",
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer -q set Master 1%%+", beautiful.volume.channel))
-            beautiful.volume.update()
+            awful.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+")
+            beautiful.update_volume()
         end),
     --awful.key({ modkey1 }, "Down",
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer -q set Master 1%%-", beautiful.volume.channel))
-            beautiful.volume.update()
+            awful.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-")
+            beautiful.update_volume()
         end),
     awful.key({ }, "XF86AudioMute",
         function ()
-            os.execute(string.format("amixer -q set Master toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-            beautiful.volume.update()
+            awful.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
+            beautiful.update_volume()
         end),
     awful.key({ modkey1, "Shift" }, "m",
         function ()
-            os.execute(string.format("amixer -q set Master toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-            beautiful.volume.update()
+            awful.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
+            beautiful.update_volume()
         end, {description = "Mute Audio", group = "hotkeys"})
 )
 

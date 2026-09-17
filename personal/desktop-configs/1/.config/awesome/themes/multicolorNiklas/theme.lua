@@ -134,40 +134,42 @@ local bat = lain.widget.bat({
     end
 })
 
--- ALSA volume
---[[
+-- PulseAudio / PipeWire volume widget (manual timer so we can force updates)
 local volicon = wibox.widget.imagebox(theme.widget_vol)
-theme.volume = lain.widget.alsa({
-    settings = function()
-        if volume_now.status == "off" then
-            volume_now.level = volume_now.level .. "M"
-        end
 
-        widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
-    end
-})
---]]
+theme.volume = wibox.widget.textbox()
 
--- PulseAudio volume (based on multicolor theme)
-local volicon = wibox.widget.imagebox(theme.widget_vol)
-theme.volume = lain.widget.pulse {
-    settings = function()
-        vlevel = volume_now.left .. "% "
-        if volume_now.muted == "yes" then
-            vlevel = vlevel .. " M"
+local function refresh_volume()
+    awful.spawn.easy_async_with_shell(
+        "sh -c 'pactl get-sink-volume @DEFAULT_SINK@ | grep -o \"[0-9]*%\" | head -n1; "
+            .. "pactl get-sink-mute @DEFAULT_SINK@ | grep -oE \"yes|no\"'",
+        function(stdout)
+            local vol, mute = stdout:match("(%d+)%%%s*(%a+)")
+            if not vol then
+                theme.volume:set_markup(markup.fontfg(theme.font, "#7493d2", "N/A"))
+                return
+            end
+            local text = vol .. "%"
+            if mute == "yes" then text = text .. " M" end
+            theme.volume:set_markup(markup.fontfg(theme.font, "#7493d2", text))
         end
-        widget:set_markup(lain.util.markup("#7493d2", vlevel))
-    end
-}
-theme.volume.widget:buttons(awful.util.table.join(
-    awful.button({}, 1, function() -- left click
-        awful.spawn("pavucontrol")
-    end)
+    )
+end
+
+-- Expose the updater so rc.lua can call it from keybindings
+theme.update_volume = refresh_volume
+
+-- Initial draw + periodic refresh every 5 seconds
+refresh_volume()
+local vol_timer = gears.timer({ timeout = 5 })
+vol_timer:connect_signal("timeout", refresh_volume)
+vol_timer:start()
+
+theme.volume:buttons(awful.util.table.join(
+    awful.button({}, 1, function() awful.spawn("pavucontrol") end)
 ))
 volicon:buttons(awful.util.table.join(
-    awful.button({}, 1, function() -- left click
-        awful.spawn("pavucontrol")
-    end)
+    awful.button({}, 1, function() awful.spawn("pavucontrol") end)
 ))
 
 -- Net
@@ -281,7 +283,7 @@ function theme.at_screen_connect(s)
             netupicon,
             netupinfo.widget,
             volicon,
-            theme.volume.widget,
+            theme.volume,
             memicon,
             memory.widget,
             cpuicon,
