@@ -330,9 +330,9 @@ globalkeys = my_table.join(
         {description = "pulseaudio control", group = "alt+ctrl"}),
 
     -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn_with_shell("maim -s | xclip -selection clipboard -t image/png") end,
+    awful.key({ }, "Print", function () awful.util.spawn_with_shell("maim -s --hidecursor | xclip -selection clipboard -t image/png") end,
         {description = "ScreenshotCopy", group = "screenshots"}),
-    awful.key({ modkey1 }, "Print", function () awful.util.spawn_with_shell("maim -s ~/Pictures/sc-$(date +%s).png") end,
+    awful.key({ modkey1 }, "Print", function () awful.util.spawn_with_shell("maim -s --hidecursor ~/Pictures/sc-$(date +%s).png") end,
         {description = "ScreenshotSave", group = "screenshots"}),
 
     -- Personal keybindings}}}
