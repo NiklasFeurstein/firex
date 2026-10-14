@@ -5,8 +5,8 @@ alias personal2='cp -Rf /personal/2/* ~ && personalsettings'
 alias personal3='cp -Rf /personal/3/* ~ && personalsettings'
 
 # screenshot with maim
-alias screenshotcopy='maim -s | xclip -selection clipboard -t image/png'
-alias screenshotsave='maim -s ~/Pictures/sc-$(date +%s).png'
+alias screenshotcopy='maim -s --hidecursor | xclip -selection clipboard -t image/png'
+alias screenshotsave='maim -s --hidecursor ~/Pictures/sc-$(date +%s).png'
 alias screenshotcopyComplete='maim | xclip -selection clipboard -t image/png'
 alias screenshotsaveComplete='maim ~/Pictures/sc-$(date +%s).png'
 
@@ -28,3 +28,16 @@ fi
 if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
+
+# --- Power off NAS together with this machine ---
+shutdown() {
+    echo "Powering off NAS (192.168.1.185)..."
+    ssh -i /home/pave/.ssh/id_rsa -o BatchMode=yes -o ConnectTimeout=5 admin@192.168.1.185 'sudo -n poweroff' \
+    && echo "NAS is shutting down." \
+    || echo "NAS unreachable or already off - continuing local shutdown."
+    sleep 2
+    command shutdown "$@"
+}
+
+# special mount so that sudo is not necessary for changing and accessing files on some File System Formats like FAT32
+alias mount_special='sudo mount -o uid=$(id -u),gid=$(id -g),umask=022'
