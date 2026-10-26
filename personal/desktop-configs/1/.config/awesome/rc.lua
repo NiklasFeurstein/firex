@@ -335,6 +335,14 @@ globalkeys = my_table.join(
     awful.key({ modkey1 }, "Print", function () awful.util.spawn_with_shell("maim -s --hidecursor ~/Pictures/sc-$(date +%s).png") end,
         {description = "ScreenshotSave", group = "screenshots"}),
 
+    -- speech to text
+    awful.key({ modkey }, "Home", function()
+        awful.spawn.with_shell([[
+            V=~/.local/bin/vocalinux
+            $V --toggle || { $V --start-minimized >/dev/null 2>&1 & sleep 3; $V --toggle; }
+        ]])
+    end, {description = "Vocalinux Speech2Text", group = "super"}),
+
     -- Personal keybindings}}}
 
 
